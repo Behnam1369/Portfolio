@@ -1,103 +1,103 @@
-html, 
+html,   
 head, 
 body, 
 main{
-    width:100%;
-    height: 100%;
-    background-color: #fff;
-    margin: 0px;
+  width:100%;
+  height: 100%;
+  background-color: #fff;
+  margin: 0px;
 }
 
-@font-face { 
-    font-family: Volte;
-    src: url(fonts/Volte.ttf);
+@font-face {
+  font-family: Volte;
+  src: url(fonts/Volte.ttf);
 }
 
-@font-face { 
-    font-family: Poppins;
-    src: url(fonts/Poppins.ttf);
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/Poppins.ttf);
 }
 
 @media all and (max-width: 900px){
-    main {
-        background-image: url('images/background.svg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
+  main {
+    background-image: url('images/background.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
 
 nav {
-    display: flex;
-    height: 8vh;
-    background-color: #ffffff81;
-    border-radius: 5px;
-    margin: 5px;
-    border:solid 1px #6b2be286;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+  display: flex;
+  height: 8vh;
+  background-color: #ffffff81;
+  border-radius: 5px;
+  margin: 5px;
+  border:solid 1px #6b2be286;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 nav img {
-    width: 25px;
-    height: 25px;
-    align-self: center;
+  width: 25px;
+  height: 25px;
+  align-self: center;
 }
 
 nav i {
-    color: #6070ff;
-    align-self: center;
+  color: #6070ff;
+  align-self: center;
 }
 
 header {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
 header>h1 {
-    font-family: Poppins;
-    font-weight: normal;
-    margin: 30px;
-    margin-bottom: 0px;
-    flex-basis: 100%;
-    font-size: 10vw;
+  font-family: Poppins;
+  font-weight: normal;
+  margin: 30px;
+  margin-bottom: 0px;
+  flex-basis: 100%;
+  font-size: 10vw;
 }
 
 header>h1>b {
-    color: #6070ff;
-    font-weight: bold;
+  color: #6070ff;
+  font-weight: bold;
 }
 header>h1>span {
-    font-weight: normal; 
-    font-size: 6.5vw;
+  font-weight: normal; 
+  font-size: 6.5vw;
 }
 
 header p {
-    font-family: Volte;
-    font-weight: bold;
-    margin: 20px;
-    flex-basis: 100%;
-    text-align: justify;
+  font-family: Volte;
+  font-weight: bold;
+  margin: 20px;
+  flex-basis: 100%;
+  text-align: justify;
 }
 
 header>span {
-    color: #6070ff;
-    font-family: Volte;
-    font-weight: bold;
-    display: block;
-    flex-basis: 100%;
-    text-align: center;
+  color: #6070ff;
+  font-family: Volte;
+  font-weight: bold;
+  display: block;
+  flex-basis: 100%;
+  text-align: center;
 }
 
 header a {
-    color: #6070ff;
+  color: #6070ff;
 }
 
 header a:hover {
-    color: #2739e0;
-    cursor: pointer;
+  color: #2739e0;
+  cursor: pointer;
 }
