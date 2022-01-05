@@ -59,7 +59,7 @@ header {
 }
 
 header > h1 {
-  font-family: Poppins, Arial;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: normal;
   margin: 30px;
   margin-bottom: 0;
@@ -74,7 +74,7 @@ header > h1 > b {
 
 header > span {
   color: #6070ff;
-  font-family: Volte, Arial;
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: bold;
   display: block;
   flex-basis: 100%;
@@ -87,7 +87,7 @@ header > h1 > span {
 }
 
 header p {
-  font-family: Volte, Arial;
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: bold;
   margin: 20px;
   flex-basis: 100%;
