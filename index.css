@@ -116,3 +116,230 @@ ul {
   gap: 25px;
   padding-left: 0;
 }
+
+/* work-about branch */
+
+.seprator1 {
+  background-image: linear-gradient(#fff, #f6f4fa);
+  height: 50px;
+}
+
+.seprator2 {
+  background-image: linear-gradient(#f6f4fa, #fff);
+  height: 50px;
+}
+
+#works {
+  background-color: #f6f4fa;
+}
+
+.work {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow:
+    #c0c0c077 0 2px 0 0,
+    #c0c0c077 0 0 0 2px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vw;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.work > img {
+  width: calc(100% - 1vw);
+}
+
+@media all and (max-width: 900px) {
+  #works {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5vw;
+    padding: 5vw;
+  }
+}
+
+.work > h3 {
+  width: 100%;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 2rem;
+  color: #172b4d;
+}
+
+.work > .span1 {
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 1em;
+  color: #172b4d;
+}
+
+.work > .span2,
+.work > .span3 {
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.work i.devider {
+  width: 2vw;
+  height: 2vw;
+  max-width: 8px;
+  max-height: 8px;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: silver;
+  display: inline-block;
+}
+
+.work p {
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+  color: #172b4d;
+}
+
+.work .tag {
+  background: #ebebff;
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: #6070ff;
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 2px;
+}
+
+.work .break {
+  height: 0;
+  flex-basis: 100%;
+}
+
+button {
+  border-radius: 5px;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  text-align: center;
+  padding: 10px;
+  margin: 2px;
+  margin-top: 10px;
+}
+
+button:enabled {
+  color: #6070ff;
+  border: solid 1px #6070ff;
+  background-color: #fff;
+}
+
+button:hover {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #6070ff;
+}
+
+button:active {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #2230d2;
+}
+
+#about {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#about > h2 {
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: normal;
+  margin: 30px;
+  margin-bottom: 0;
+  flex-basis: 100%;
+  font-size: 10vw;
+}
+
+#about > span {
+  color: #6070ff;
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+  display: block;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+#about p {
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+  margin: 20px;
+  flex-basis: 100%;
+  text-align: justify;
+}
+
+#about a {
+  color: #6070ff;
+}
+
+#about a:hover {
+  color: #2739e0;
+  cursor: pointer;
+}
+
+#about h3 {
+  flex-basis: 70%;
+  padding-left: 10%;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+}
+
+#about i {
+  flex-basis: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+#about ul.tech {
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  padding-left: 6%;
+  padding-right: 10px;
+  gap: 5px;
+}
+
+#about ul.tech > li {
+  flex-basis: 60%;
+  background-repeat: no-repeat;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  list-style: none;
+  padding: 20px;
+  padding-left: 70px;
+  background-position: 5px 5px;
+}
+
+#about ul.tech > li.javascript {
+  background-image: url("images/javascript.png");
+}
+
+#about ul.tech > li.html {
+  background-image: url("images/html.png");
+}
+
+#about ul.tech > li.css {
+  background-image: url("images/css.png");
+}
+
+@media all and (max-width: 900px) {
+  #about ul.tech > li {
+    display: inline-block;
+  }
+}
+
+#about hr {
+  flex-basis: 100%;
+  color: silver;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 5%;
+  margin-right: 5px;
+}
