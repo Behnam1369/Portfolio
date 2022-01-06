@@ -20,9 +20,9 @@ main {
 
 @media all and (max-width: 900px) {
   main {
-    background-image: url('images/background.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+  background-image: url('images/background.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   }
 }
 
@@ -55,7 +55,6 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
 }
 
 header > h1 {
@@ -101,4 +100,19 @@ header a {
 header a:hover {
   color: #2739e0;
   cursor: pointer;
+}
+
+ul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+  padding-left: 0;
+}
+
+nav a {
+  width: 25px;
+  height: 25px;
+  align-self: center;
 }
