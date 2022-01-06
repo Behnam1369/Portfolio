@@ -20,9 +20,9 @@ main {
 
 @media all and (max-width: 900px) {
   main {
-  background-image: url('images/background.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
+    background-image: url('images/background.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 
@@ -36,6 +36,12 @@ nav {
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+nav a {
+  width: 25px;
+  height: 25px;
+  align-self: center;
 }
 
 nav img {
@@ -102,17 +108,11 @@ header a:hover {
   cursor: pointer;
 }
 
-ul{
+ul {
   width: 100%;
   display: flex;
   justify-content: center;
   list-style: none;
   gap: 25px;
   padding-left: 0;
-}
-
-nav a {
-  width: 25px;
-  height: 25px;
-  align-self: center;
 }
