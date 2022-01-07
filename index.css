@@ -29,9 +29,11 @@ main {
 nav {
   display: flex;
   height: 8vh;
+
   /* background-color: #ffffff81; */
   border-radius: 5px;
   margin: 5px;
+
   /* border: solid 1px #6b2be286; */
   justify-content: space-between;
   padding-left: 10px;
