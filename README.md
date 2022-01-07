@@ -25,7 +25,7 @@ Additional description about the project and its features.
 
 👤 **Behnam Aghaali**
 
-- GitHub: [@githubhandle](https://github.com/Behnam1369)
+- GitHub: [Github](https://github.com/Behnam1369)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/behnam-aghaali-62561375)
 - Twitter: [Twitter](https://twitter.com/behnamagh1369)
 
