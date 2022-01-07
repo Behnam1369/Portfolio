@@ -29,10 +29,10 @@ main {
 nav {
   display: flex;
   height: 8vh;
-  background-color: #ffffff81;
+  /* background-color: #ffffff81; */
   border-radius: 5px;
   margin: 5px;
-  border: solid 1px #6b2be286;
+  /* border: solid 1px #6b2be286; */
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
@@ -77,7 +77,7 @@ header > h1 > b {
   font-weight: bold;
 }
 
-header > span {
+header > h5 {
   color: #6070ff;
   font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: bold;
@@ -108,7 +108,7 @@ header a:hover {
   cursor: pointer;
 }
 
-ul {
+header ul {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -196,6 +196,13 @@ ul {
   color: #172b4d;
 }
 
+.work .tags {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding-left: 0;
+}
+
 .work .tag {
   background: #ebebff;
   border-radius: 8px;
@@ -257,7 +264,7 @@ button:active {
   font-size: 10vw;
 }
 
-#about > span {
+#about > h5 {
   color: #6070ff;
   font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: bold;
@@ -272,6 +279,15 @@ button:active {
   margin: 20px;
   flex-basis: 100%;
   text-align: justify;
+}
+
+#about ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+  padding-left: 0;
 }
 
 #about a {
@@ -293,6 +309,18 @@ button:active {
   flex-basis: 10%;
   margin-right: 10%;
   text-align: center;
+}
+
+#about ul.techs {
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+#about ul.techs li {
+  flex-basis: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 #about ul.tech {
