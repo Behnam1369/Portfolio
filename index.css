@@ -119,6 +119,15 @@ header ul {
   padding-left: 0;
 }
 
+button {
+  border-radius: 5px;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  text-align: center;
+  padding: 10px;
+  margin: 2px;
+  margin-top: 10px;
+}
+
 /* footer */
 footer {
   background-color: #6070ff;
@@ -425,14 +434,7 @@ footer button {
   margin-right: 5px;
 }
 
-button {
-  border-radius: 5px;
-  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
-  text-align: center;
-  padding: 10px;
-  margin: 2px;
-  margin-top: 10px;
-}
+
 
 button:enabled {
   color: #6070ff;
