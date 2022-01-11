@@ -240,6 +240,7 @@ button:hover {
   color: #fff;
   border: solid 1px #6070ff;
   background-color: #6070ff;
+  cursor: pointer;
 }
 
 button:active {
