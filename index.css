@@ -373,82 +373,80 @@ button:active {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #6070FF;
-    background-image: url("/images/footer.svg");
+  background-color: #6070FF;
+  border-top-left-radius: 60px;
+  padding: 40px;
+  padding-top: 70px;
+  margin-top: 100px;
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media all and (max-width: 900px) {
+  footer {
+    background-image: url("images/footer.svg");
+    background-position-x: 150px;
     background-repeat: no-repeat;
-    width: 90%;
-    height: 709.17px;
-    gap: 10px;
-    background-position-x: 200px;
-    padding: 24px;
-    border-top-left-radius: 100px;
+  }
 }
 
 footer h2 {
-    margin-top: 110px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 52px;
-    text-align: center;
-    color: #ffffff;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 footer p {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    color: #EBEBFF;
+  color: #fff;
+  text-align: center;
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0;
 }
 
-footer input {
-    background: #FFFFFF;
-    border: 1px solid #CFD8DC;
-    border-radius: 8px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    height: 48px;
-    padding-left: 15px;
+footer input[type="text"],
+footer input[type="email"] {
+  height: 48px;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 8px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  border: none;
+}
+
+footer input[type="text"]:focus,
+footer input[type="email"]:focus {
+    box-shadow:
+    #ffd90077 0 3px 0 0,
+    #ffd90077 0 0 0 3px;
 }
 
 footer textarea {
-    background: #FFFFFF;
-    border: 1px solid #CFD8DC;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 24px;
-    color: #B3BAC5;
-    padding-left: 15px;
-    height: 140px;
-    border-radius: 8px;
+  height: 170px;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 8px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  border: none;
+}
+
+footer textarea:focus {
+    box-shadow:
+    #ffd90077 0 3px 0 0,
+    #ffd90077 0 0 0 3px;
 }
 
 footer button {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #6070FF;
-    background: #FFFFFF;
-    border-radius: 8px;
-    width: 140px;
-    height: 48px;
+  height: 48px; 
+  width: 140px;
 }
