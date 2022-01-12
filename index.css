@@ -17,7 +17,7 @@ main {
   font-family: Poppins;
   src: url(fonts/Poppins.ttf);
 }
- 
+
 nav {
   display: flex;
   height: 8vh;
@@ -50,7 +50,7 @@ nav ul {
   display: none;
 }
 
-nav li{
+nav li {
   list-style: none;
   font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   display: inline-block;
@@ -62,16 +62,17 @@ nav i {
   align-self: center;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   nav > a {
     margin-left: 50px;
   }
+
   nav img {
     width: 40px;
     height: 40px;
     align-self: center;
-    
   }
+
   nav ul {
     display: block;
   }
@@ -128,7 +129,7 @@ header p {
   text-align: justify;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   header {
     background-image: url('images/background-desktop.svg');
   }
@@ -176,6 +177,25 @@ button {
   padding: 10px;
   margin: 2px;
   margin-top: 10px;
+}
+
+button:enabled {
+  color: #6070ff;
+  border: solid 1px #6070ff;
+  background-color: #fff;
+}
+
+button:hover {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #6070ff;
+  cursor: pointer;
+}
+
+button:active {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #2230d2;
 }
 
 /* footer */
@@ -313,7 +333,7 @@ footer button {
   #works {
     grid-template-columns: 2fr;
   }
-  
+
   .work {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -322,10 +342,10 @@ footer button {
     padding: 20px;
   }
 
-  .work:nth-child(even) img{
+  .work:nth-child(even) img {
     order: 1;
   }
-  
+
   .work > div {
     display: flex;
     flex-wrap: wrap;
@@ -337,7 +357,8 @@ footer button {
   .work h3 {
     margin-top: 0;
   }
-  .work .tags{
+
+  .work .tags {
     margin: 0;
   }
 
@@ -508,6 +529,7 @@ footer button {
   padding: 20px;
   padding-left: 70px;
   background-position: 5px 5px;
+  display: inline-block;
 }
 
 #about ul.tech > li.javascript {
@@ -520,10 +542,6 @@ footer button {
 
 #about ul.tech > li.css {
   background-image: url("images/css.png");
-}
-
-#about ul.tech > li {
-  display: inline-block;
 }
 
 #about hr {
@@ -539,7 +557,7 @@ footer button {
   align-self: center;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   #about {
     flex-wrap: nowrap;
     justify-content: center;
@@ -554,23 +572,4 @@ footer button {
   #about > div {
     flex-basis: 50%;
   }
-}
-
-button:enabled {
-  color: #6070ff;
-  border: solid 1px #6070ff;
-  background-color: #fff;
-}
-
-button:hover {
-  color: #fff;
-  border: solid 1px #6070ff;
-  background-color: #6070ff;
-  cursor: pointer;
-}
-
-button:active {
-  color: #fff;
-  border: solid 1px #6070ff;
-  background-color: #2230d2;
 }
