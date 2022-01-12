@@ -275,7 +275,6 @@ footer button {
   width: 140px;
 }
 
-
 button:enabled {
   color: #6070ff;
   border: solid 1px #6070ff;
@@ -330,6 +329,12 @@ button:active {
   width: calc(100% - 1vw);
 }
 
+.work > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
 @media screen and (min-width: 992px) {
   #works {
     grid-template-columns: 2fr;
@@ -348,9 +353,6 @@ button:active {
   }
 
   .work > div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
     padding-left: 5%;
     padding-right: 5%;
   }
