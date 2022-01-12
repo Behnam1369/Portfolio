@@ -17,15 +17,7 @@ main {
   font-family: Poppins;
   src: url(fonts/Poppins.ttf);
 }
-
-@media all and (max-width: 900px) {
-  main {
-    background-image: url('images/background.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
-
+ 
 nav {
   display: flex;
   height: 8vh;
@@ -52,17 +44,52 @@ nav img {
   align-self: center;
 }
 
+nav ul {
+  float: right;
+  margin-right: 50px;
+  display: none;
+}
+
+nav li{
+  list-style: none;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  display: inline-block;
+  margin-right: 30px;
+}
+
 nav i {
   color: #6070ff;
   align-self: center;
 }
 
+@media screen and (min-width: 992px){
+  nav > a {
+    margin-left: 50px;
+  }
+  nav img {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    
+  }
+  nav ul {
+    display: block;
+  }
+
+  nav > i {
+    display: none !important;
+  }
+}
+
 header {
-  margin-top: 30px;
+  padding-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url('images/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header > h1 {
@@ -101,6 +128,29 @@ header p {
   text-align: justify;
 }
 
+@media screen and (min-width: 992px){
+  header {
+    background-image: url('images/background-desktop.svg');
+  }
+
+  header > h1 {
+    font-size: 5vw;
+    margin-left: 260px;
+    margin-top: 160px;
+  }
+
+  header > h1 > span {
+    font-size: 3vw;
+    display: inherit;
+  }
+
+  header p {
+    margin-left: 260px;
+    margin-right: 260px;
+    font-size: 1.7vw;
+  }
+}
+
 header a {
   color: #6070ff;
 }
@@ -135,6 +185,9 @@ footer {
   padding: 40px;
   padding-top: 70px;
   margin-top: 100px;
+  background-image: url("images/footer.svg");
+  background-position-x: 150px;
+  background-repeat: no-repeat;
 }
 
 footer form {
@@ -143,11 +196,24 @@ footer form {
   gap: 20px;
 }
 
-@media all and (max-width: 900px) {
+@media all and (min-width: 992px) {
   footer {
-    background-image: url("images/footer.svg");
-    background-position-x: 150px;
-    background-repeat: no-repeat;
+    background-image: url("images/footer-desktop.svg");
+    background-position-x: 0;
+    background-size: contain;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  footer input,
+  footer textarea {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  footer button {
+    margin-left: 10%;
+    margin-top: 0;
   }
 }
 
@@ -222,6 +288,10 @@ footer button {
 
 #works {
   background-color: #f6f4fa;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5vw;
+  padding: 5vw;
 }
 
 .work {
@@ -239,30 +309,58 @@ footer button {
   width: calc(100% - 1vw);
 }
 
-@media all and (max-width: 900px) {
+@media screen and (min-width: 992px) {
   #works {
+    grid-template-columns: 2fr;
+  }
+  
+  .work {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 5vw;
-    padding: 5vw;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .work:nth-child(even) img{
+    order: 1;
+  }
+  
+  .work > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .work h3 {
+    margin-top: 0;
+  }
+  .work .tags{
+    margin: 0;
+  }
+
+  .work .break {
+    margin: 0;
   }
 }
 
-.work > h3 {
+.work h3 {
   width: 100%;
   font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-size: 2rem;
   color: #172b4d;
 }
 
-.work > .span1 {
+.work .span1 {
   font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-size: 1em;
   color: #172b4d;
 }
 
-.work > .span2,
-.work > .span3 {
+.work .span2,
+.work .span3 {
   font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-size: 0.7rem;
   color: gray;
@@ -317,7 +415,12 @@ footer button {
   align-items: baseline;
 }
 
-#about > h2 {
+#about > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#about h2 {
   font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: normal;
   margin: 30px;
@@ -326,7 +429,7 @@ footer button {
   font-size: 10vw;
 }
 
-#about > h5 {
+#about h5 {
   color: #6070ff;
   font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: bold;
@@ -419,10 +522,8 @@ footer button {
   background-image: url("images/css.png");
 }
 
-@media all and (max-width: 900px) {
-  #about ul.tech > li {
-    display: inline-block;
-  }
+#about ul.tech > li {
+  display: inline-block;
 }
 
 #about hr {
@@ -432,6 +533,27 @@ footer button {
   margin-bottom: 0;
   margin-left: 5%;
   margin-right: 5px;
+}
+
+#about button {
+  align-self: center;
+}
+
+@media screen and (min-width: 992px){
+  #about {
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #about h2{
+    font-size: 5vw;
+  }
+
+  #about > div {
+    flex-basis: 50%;
+  }
 }
 
 button:enabled {
