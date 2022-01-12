@@ -179,25 +179,6 @@ button {
   margin-top: 10px;
 }
 
-button:enabled {
-  color: #6070ff;
-  border: solid 1px #6070ff;
-  background-color: #fff;
-}
-
-button:hover {
-  color: #fff;
-  border: solid 1px #6070ff;
-  background-color: #6070ff;
-  cursor: pointer;
-}
-
-button:active {
-  color: #fff;
-  border: solid 1px #6070ff;
-  background-color: #2230d2;
-}
-
 /* footer */
 footer {
   background-color: #6070ff;
@@ -292,6 +273,26 @@ footer textarea:focus {
 footer button {
   height: 48px;
   width: 140px;
+}
+
+
+button:enabled {
+  color: #6070ff;
+  border: solid 1px #6070ff;
+  background-color: #fff;
+}
+
+button:hover {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #6070ff;
+  cursor: pointer;
+}
+
+button:active {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #2230d2;
 }
 
 /* work-about branch */
@@ -565,7 +566,7 @@ footer button {
     padding-right: 40px;
   }
 
-  #about h2{
+  #about h2 {
     font-size: 5vw;
   }
 
