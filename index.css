@@ -68,6 +68,17 @@ nav i {
   align-self: center;
 }
 
+/*logo transition*/
+
+#logo{
+  transition-property: image-size;
+  transition-duration: 6s;
+  transition-delay:2s;
+}
+#logo:hover{
+  transform:scale(1.5);
+}
+
 @media screen and (min-width: 992px) {
   nav img {
     width: 40px;
