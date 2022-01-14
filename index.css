@@ -36,6 +36,11 @@ nav a {
   width: 25px;
   height: 25px;
   align-self: center;
+  text-decoration: none;
+}
+
+nav > a {
+  margin-left: 50px;
 }
 
 nav img {
@@ -57,16 +62,13 @@ nav li {
   margin-right: 30px;
 }
 
+
 nav i {
   color: #6070ff;
   align-self: center;
 }
 
 @media screen and (min-width: 992px) {
-  nav > a {
-    margin-left: 50px;
-  }
-
   nav img {
     width: 40px;
     height: 40px;
@@ -80,7 +82,23 @@ nav i {
   nav > i {
     display: none !important;
   }
+
+  nav li a {
+    padding: 13px;
+    color: #344563;
+    background-image: linear-gradient(to right , #344563 , #6070ff );
+    background-position-y: 46px;
+    background-repeat: no-repeat;
+    transition: background-position 0.2s ease-in-out;
+    background-position-x: -100px;
+  }
+
+  nav li a:hover {
+    background-position-x: 0px;
+  }
+
 }
+
 
 header {
   padding-top: 30px;
