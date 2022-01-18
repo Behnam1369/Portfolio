@@ -19,7 +19,7 @@ main {
 }
 
 header a {
-  color: #6070ff;
+  color: #505f79;
 }
 
 nav a {
@@ -146,7 +146,7 @@ header > h1 > b {
   font-weight: bold;
 }
 
-header > h5 {
+header > span {
   color: #6070ff;
   font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: bold;
@@ -225,6 +225,16 @@ footer form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+footer label {
+  color: #fff;
+  margin-left: 10%;
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+}
+
+footer label span {
+  color: red;
 }
 
 @media all and (min-width: 992px) {
@@ -483,7 +493,7 @@ button:active {
   font-size: 10vw;
 }
 
-#about h5 {
+#about span {
   color: #6070ff;
   font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-weight: bold;
@@ -510,7 +520,7 @@ button:active {
 }
 
 #about a {
-  color: #6070ff;
+  color: #505f79;
 }
 
 #about a:hover {
