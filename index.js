@@ -12,7 +12,7 @@ document.querySelector('i.fa').addEventListener('click', () => {
   });
   const items = document.querySelectorAll('#mobile-menu li');
   const itemsArr = Array.from(items);
-  for (let i = 0; i < itemsArr.length; i++) {
+  for (let i = 0; i < itemsArr.length; i += 1) {
     itemsArr[i].addEventListener('click', () => {
       menu.style.display = 'none';
       closeButton.remove();
