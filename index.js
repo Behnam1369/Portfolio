@@ -12,10 +12,10 @@ document.querySelector('i.fa').addEventListener('click', () => {
   });
   const items = document.querySelectorAll('#mobile-menu li');
   const itemsArr = Array.from(items);
-  itemsArr.map((el) => {
-    return el.addEventListener('click', () => {
+  for (i = 0; i < itemsArr.length; i++) {
+    itemsArr[i].addEventListener('click', () => {
       menu.style.display = 'none';
       closeButton.remove();
     });
-  });
+  }
 });
