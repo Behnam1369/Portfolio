@@ -1,17 +1,19 @@
-document.querySelector("i.fa").addEventListener("click", function () {
-  let menu = document.querySelector("#mobile-menu");
+document.querySelector("i.fa").addEventListener("click", () => {
+  const menu = document.querySelector("#mobile-menu");
   menu.style.display = "flex";
-  let closeButton = document.createElement("li");
-  closeButton.innerHTML = "<span class='closeMenu'></span>";
+  const closeButton = document.createElement("li");
+  const closeButtonSpan = document.createElement("span");
+  closeButtonSpan.classList.add("closeMenu");
+  closeButton.appendChild(closeButtonSpan);
   menu.insertBefore(closeButton, menu.firstChild);
-  closeButton.addEventListener("click", function () {
+  closeButton.addEventListener("click", () => {
     menu.style.display = "none";
     closeButton.remove();
   });
-  let items = document.querySelectorAll("#mobile-menu li");
-  var itemsArr = Array.from(items);
+  const items = document.querySelectorAll("#mobile-menu li");
+  const itemsArr = Array.from(items);
   itemsArr.map(function (el) {
-    el.addEventListener("click", function () {
+    return el.addEventListener("click", () => {
       menu.style.display = "none";
       closeButton.remove();
     });
