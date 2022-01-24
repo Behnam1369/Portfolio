@@ -31,6 +31,7 @@ nav a {
 
 nav > a {
   margin-left: 50px;
+  margin-top: -20px;
 }
 
 header a:hover {
@@ -40,16 +41,20 @@ header a:hover {
 
 nav {
   display: flex;
-  height: 8vh;
+  height: 60px;
 
   /* background-color: #ffffff81; */
   border-radius: 5px;
-  margin: 5px;
+  margin: 0;
 
   /* border: solid 1px #6b2be286; */
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 20px);
+  background-color: #fff;
 }
 
 nav img {
@@ -74,6 +79,7 @@ nav li {
 nav i {
   color: #6070ff;
   align-self: center;
+  margin-right: 20px;
 }
 
 nav > a:hover {
@@ -127,7 +133,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: url('images/background.svg');
+  background-image: url("images/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -170,7 +176,7 @@ header p {
 
 @media screen and (min-width: 992px) {
   header {
-    background-image: url('images/background-desktop.svg');
+    background-image: url("images/background-desktop.svg");
   }
 
   header > h1 {
@@ -289,9 +295,7 @@ footer input[type="email"] {
 
 footer input[type="text"]:focus,
 footer input[type="email"]:focus {
-  box-shadow:
-    #ffd90077 0 3px 0 0,
-    #ffd90077 0 0 0 3px;
+  box-shadow: #ffd90077 0 3px 0 0, #ffd90077 0 0 0 3px;
 }
 
 footer textarea {
@@ -305,9 +309,7 @@ footer textarea {
 }
 
 footer textarea:focus {
-  box-shadow:
-    #ffd90077 0 3px 0 0,
-    #ffd90077 0 0 0 3px;
+  box-shadow: #ffd90077 0 3px 0 0, #ffd90077 0 0 0 3px;
 }
 
 footer button {
@@ -614,5 +616,46 @@ button:active {
 
   #about > div {
     flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  nav > a {
+    margin-top: -10px;
+  }
+
+  nav ul {
+    /* display: flex; */
+    flex-direction: column;
+    gap: 5vh;
+    background-color: #6070ffde;
+    backdrop-filter: saturate(180%) blur(4px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    padding: 20px;
+  }
+
+  nav ul li:nth-child(1) {
+    align-self: flex-end;
+    padding: 20px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 8vw;
+  }
+
+  nav ul li span.closeMenu {
+    background-image: url(images/close.svg);
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
