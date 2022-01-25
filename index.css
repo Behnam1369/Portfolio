@@ -133,7 +133,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: url("images/background.svg");
+  background-image: url('images/background.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -176,7 +176,7 @@ header p {
 
 @media screen and (min-width: 992px) {
   header {
-    background-image: url("images/background-desktop.svg");
+    background-image: url('images/background-desktop.svg');
   }
 
   header > h1 {
@@ -222,7 +222,7 @@ footer {
   padding: 40px;
   padding-top: 70px;
   margin-top: 100px;
-  background-image: url("images/footer.svg");
+  background-image: url('images/footer.svg');
   background-position-x: 150px;
   background-repeat: no-repeat;
 }
@@ -245,7 +245,7 @@ footer label span {
 
 @media all and (min-width: 992px) {
   footer {
-    background-image: url("images/footer-desktop.svg");
+    background-image: url('images/footer-desktop.svg');
     background-position-x: 0;
     background-size: contain;
     padding-left: 25%;
@@ -282,8 +282,8 @@ footer p {
   margin-top: 0;
 }
 
-footer input[type="text"],
-footer input[type="email"] {
+footer input[type='text'],
+footer input[type='email'] {
   height: 48px;
   outline: none;
   border-radius: 8px;
@@ -293,8 +293,8 @@ footer input[type="email"] {
   border: none;
 }
 
-footer input[type="text"]:focus,
-footer input[type="email"]:focus {
+footer input[type='text']:focus,
+footer input[type='email']:focus {
   box-shadow: #ffd90077 0 3px 0 0, #ffd90077 0 0 0 3px;
 }
 
@@ -578,15 +578,15 @@ button:active {
 }
 
 #about ul.tech > li.javascript {
-  background-image: url("images/javascript.png");
+  background-image: url('images/javascript.png');
 }
 
 #about ul.tech > li.html {
-  background-image: url("images/html.png");
+  background-image: url('images/html.png');
 }
 
 #about ul.tech > li.css {
-  background-image: url("images/css.png");
+  background-image: url('images/css.png');
 }
 
 #about hr {
@@ -658,4 +658,37 @@ button:active {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+div.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 2%;
+  background-color: silver;
+}
+
+div.popup {
+  background-color: #fff;
+  padding: 10px;
+  width: 65%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+div.popup img {
+  width: 90%;
+}
+
+div.popup h2 {
+  width: 100%;
+  font-family: Poppins, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 2rem;
+  color: #172b4d;
 }
