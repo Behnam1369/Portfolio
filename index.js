@@ -3,7 +3,7 @@ document.querySelector('i.fa').addEventListener('click', () => {
   menu.style.display = 'flex';
   const closeButton = document.createElement('li');
   const closeButtonSpan = document.createElement('span');
-  closeButtonSpan.classList.add('closeMenu');
+  closeButtonSpan.classList.add('close-button');
   closeButton.appendChild(closeButtonSpan);
   menu.insertBefore(closeButton, menu.firstChild);
   closeButton.addEventListener('click', () => {
@@ -49,10 +49,11 @@ buttonArr.map((el) => {
     popupObj.paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`;
 
     const closeButton = document.createElement('span');
-    closeButton.classList.add('closeMenu');
+    closeButton.classList.add('close-button');
     closeButton.addEventListener('click', () => {
       popupContainer.remove();
-    })
+      document.querySelector('html').style.overflow = 'auto';
+    });
     popup.appendChild(closeButton);
 
     const title = document.createElement('h2');
@@ -64,10 +65,18 @@ buttonArr.map((el) => {
     client.classList.add('span1');
     popup.appendChild(client);
 
+    const devider1 = document.createElement('i');
+    devider1.classList.add('devider');
+    popup.appendChild(devider1);
+
     const role = document.createElement('span');
     role.innerHTML = popupObj.role;
     role.classList.add('span2');
     popup.appendChild(role);
+
+    const devider2 = document.createElement('i');
+    devider2.classList.add('devider');
+    popup.appendChild(devider2);
 
     const year = document.createElement('span');
     year.innerHTML = popupObj.year;
@@ -82,6 +91,9 @@ buttonArr.map((el) => {
     paragraph.innerHTML = popupObj.paragraph;
     popup.appendChild(paragraph);
 
+    const tagsAndButtonsDiv = document.createElement('div');
+    tagsAndButtonsDiv.classList.add('tags-buttons');
+
     const tags = document.createElement('ul');
     popupObj.tags.map((t) => {
       const tag = document.createElement('li');
@@ -89,20 +101,23 @@ buttonArr.map((el) => {
       tag.innerHTML = t;
       tags.appendChild(tag);
     });
-    popup.appendChild(tags);
+    tagsAndButtonsDiv.appendChild(tags);
 
-    const seeLiveButton = document.createElement('a');
+    const seeLiveButton = document.createElement('button');
     seeLiveButton.classList.add('button');
     seeLiveButton.classList.add('see-project-button');
-    seeLiveButton.innerHTML = 'See Project';
-    popup.appendChild(seeLiveButton);
+    seeLiveButton.innerHTML = '<a> See Live </a>';
+    tagsAndButtonsDiv.appendChild(seeLiveButton);
 
-    const seeSourceButton = document.createElement('a');
+    const seeSourceButton = document.createElement('button');
     seeSourceButton.classList.add('button');
     seeSourceButton.classList.add('see-source-button');
-    seeSourceButton.innerHTML = 'See Source';
-    popup.appendChild(seeSourceButton);
+    seeSourceButton.innerHTML = '<a> See Source </a>';
+    tagsAndButtonsDiv.appendChild(seeSourceButton);
 
+    popup.appendChild(tagsAndButtonsDiv);
+
+    document.querySelector('html').style.overflow = 'hidden';
     document.querySelector('body').appendChild(popupContainer);
 
     //console.log(popup);
