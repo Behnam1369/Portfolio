@@ -668,7 +668,7 @@ i.devider {
   height: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
-  background-color: rgba(192, 192, 192, 0.699);
+  background-color: #c0c0c0b2;
   backdrop-filter: saturate(180%) blur(4px);
   overflow: auto;
 }
@@ -695,6 +695,7 @@ i.devider {
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 .popup img {
@@ -736,6 +737,14 @@ i.devider {
   padding-left: 20px;
   justify-content: flex-start;
 }
+.popup a {
+  margin-top: 3px;
+  display: inline-flex;
+  flex-basis: 47%;
+}
+.popup a button {
+  width: 100%;
+}
 
 .popup ul {
   display: flex;
@@ -758,18 +767,32 @@ i.devider {
   max-height: 20px;
 }
 
-.see-project-button,
-.see-source-button {
-  flex-basis: 47%;
+.see-project-button button,
+.see-source-button button {
   text-align: left;
   background-repeat: no-repeat;
   background-position-x: calc(100% - 5px);
   background-position-y: center;
 }
 
-.see-project-button {
+.see-project-button button {
   background-image: url('images/see-live.png');
 }
-.see-source-button {
+.see-source-button button {
   background-image: url('images/github-icon.png');
+}
+
+@media screen and (max-width: 991px) {
+  .popup {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .popup p {
+    flex-basis: 100%;
+  }
+
+  .popup .tags-buttons {
+    flex-basis: 100%;
+  }
 }
