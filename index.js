@@ -1,12 +1,3 @@
-document.addEventListener(
-  'DOMContentLoaded',
-  function () {
-    createWorks();
-    craetePopups();
-  },
-  false
-);
-
 document.querySelector('i.fa').addEventListener('click', () => {
   const menu = document.querySelector('#mobile-menu');
   menu.style.display = 'flex';
@@ -39,7 +30,8 @@ const projects = [
     tags: ['html', 'css', 'javaScript', 'github', 'ruby', 'bootstrap'],
     liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
     sourceLink: 'https://github.com/Behnam1369/Portfolio',
-    paragraph: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    paragraph:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
   },
   {
     img: '/images/work2.jpg',
@@ -50,7 +42,8 @@ const projects = [
     tags: ['html', 'css', 'javaScript'],
     liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
     sourceLink: 'https://github.com/Behnam1369/Portfolio',
-    paragraph: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
+    paragraph:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
   },
   {
     img: '/images/work3.jpg',
@@ -61,7 +54,8 @@ const projects = [
     tags: ['html', 'css', 'javaScript', 'bootstrap'],
     liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
     sourceLink: 'https://github.com/Behnam1369/Portfolio',
-    paragraph: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    paragraph:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
   },
   {
     img: '/images/work4.jpg',
@@ -72,53 +66,33 @@ const projects = [
     tags: ['html', 'css', 'javaScript', 'github', 'ruby'],
     liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
     sourceLink: 'https://github.com/Behnam1369/Portfolio',
-    paragraph: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
+    paragraph:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
   },
 ];
 
 function createWorks() {
   const works = document.querySelector('#works');
-  console.log(works);
   projects.map((el, i) => {
     const work = document.createElement('div');
     work.classList.add('work');
-    work.innerHTML =
-      `<img src="` +
-      el.img +
-      `" alt="Work ` +
-      i +
-      `" />
+    work.innerHTML = `<img src="${el.img}" alt="Work ${i}" />
         <div>
-          <h3>` +
-      el.title +
-      `</h3>
-          <span class="span1">` +
-      el.client +
-      `</span>
+          <h3>${el.title}</h3>
+          <span class="span1">${el.client}</span>
           <i class="devider"></i>
-          <span class="span2">` +
-      el.role +
-      `</span>
+          <span class="span2">${el.role}</span>
           <i class="devider"></i>
-          <span class="span2">` +
-      el.year +
-      `</span>
-          <p>` +
-      el.paragraph +
-      `</p>
+          <span class="span2">${el.year}</span>
+          <p>${el.paragraph}</p>
           <ul class="tags">
-          ` +
-      el.tags
-        .map(function (t) {
-          return '<li class="tag">' + t + '</li>';
-        })
-        .join('') +
-      `    </ul>
+          ${el.tags.map((t) => `<li class="tag">${t}</li>`).join('')}    </ul>
           <div class="break"></div>
           <button>See Project</button>
         </div>
     `;
     works.appendChild(work);
+    return null;
   });
 }
 
@@ -126,7 +100,6 @@ function craetePopups() {
   const button = document.querySelectorAll('.work button');
   const buttonArr = Array.from(button);
   buttonArr.map((el, i) => {
-    console.log(i);
     el.addEventListener('click', () => {
       const popupContainer = document.createElement('div');
       popupContainer.classList.add('popup-container');
@@ -188,6 +161,7 @@ function craetePopups() {
         tag.classList.add('tag');
         tag.innerHTML = t;
         tags.appendChild(tag);
+        return null;
       });
       tagsAndButtonsDiv.appendChild(tags);
 
@@ -207,8 +181,16 @@ function craetePopups() {
 
       document.querySelector('html').style.overflow = 'hidden';
       document.querySelector('body').appendChild(popupContainer);
-
-      //console.log(popup);
     });
+    return null;
   });
 }
+
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    createWorks();
+    craetePopups();
+  },
+  false,
+);
