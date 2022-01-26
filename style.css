@@ -38,6 +38,7 @@ nav > a {
   margin-top: 3px;
   display: inline-flex;
   flex-basis: 47%;
+  text-decoration: none;
 }
 
 header a:hover {
