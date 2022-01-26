@@ -139,7 +139,7 @@
             maxlength="30"
           />
           <label>Email<span> * </span></label>
-          <input type="email" name="email" placeholder="your email" required />
+          <input id="email" type="email" name="email" placeholder="your email" required />
           <label>Message<span> * </span></label>
           <textarea
             placeholder="Write your message here"
@@ -147,7 +147,8 @@
             required
             maxlength="500"
           ></textarea>
-          <button type="submit">Get it Touch</button>
+          <button type="button" class="submit-button">Get it Touch</button>
+          <span class="error-message"></span>
         </form>
       </footer>
     </main>

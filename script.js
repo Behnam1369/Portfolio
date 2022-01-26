@@ -194,3 +194,47 @@ document.addEventListener(
   },
   false,
 );
+
+const form  = document.getElementsByTagName('form')[0];
+const emailBox = document.getElementById('email');
+const error = document.getElementsByClassName('error-message')[0];
+const submitButton = document.querySelector('.submit-button');
+console.log(submitButton);
+submitButton.addEventListener('click', function (e) {
+  const emailText = emailBox.value;
+  var pattern = /[A-Z]/g;
+  if (pattern.test(emailText)){
+    e.preventDefault();
+    showError("All email letters should be in lower case");   
+  } else if (emailBox.validity.valueMissing) {
+    alert(1);
+    showError("Please enter your email address");
+    e.preventDefault();
+  } else if (emailBox.validity.typeMismatch){
+    e.preventDefault();
+    showError("Please enter your email address");
+  }
+});
+
+
+
+function showError(text) {
+
+    if (!error.style.opacity) {
+        error.style.opacity = 1;
+    } // end if
+
+    var outInterval = setInterval(function() {
+        error.style.opacity -= 0.02;
+        if (error.style.opacity <= 0) {
+            clearInterval(outInterval);
+            error.innerHTML = text;
+            var inInterval = setInterval(function() {
+                error.style.opacity = Number(error.style.opacity)+0.02;
+                if (error.style.opacity >= 1)
+                    clearInterval(inInterval);
+            }, 200/50 );
+        } // end if
+    }, 200/50 );
+
+}
