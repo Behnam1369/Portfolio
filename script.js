@@ -204,24 +204,25 @@ submitButton.addEventListener('click', function (e) {
   const emailText = emailBox.value;
   var pattern = /[A-Z]/g;
   if (pattern.test(emailText)){
-    e.preventDefault();
-    showError("All email letters should be in lower case");   
+    showError("All email letters should be in lower case");
   } else if (emailBox.validity.valueMissing) {
-    alert(1);
     showError("Please enter your email address");
-    e.preventDefault();
   } else if (emailBox.validity.typeMismatch){
-    e.preventDefault();
-    showError("Please enter your email address");
+    showError("Please enter a valid email address");
   }
+  else form.submit();
 });
-
-
 
 function showError(text) {
 
     if (!error.style.opacity) {
+        emailBox.addEventListener('input',() => {if(emailBox.validity.valid) {
+          emailBox.style.backgroundColor = 'lightgreen';
+          emailBox.style.border = 'none';
+          error.style.opacity = 0;
+        }});
         error.style.opacity = 1;
+        emailBox.style.border = '4px solid red';
     } // end if
 
     var outInterval = setInterval(function() {
