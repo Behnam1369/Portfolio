@@ -332,7 +332,7 @@ button:enabled {
 
 button:hover {
   color: #fff;
-  border: solid 1px #ffffff;
+  border: solid 1px #fff;
   background-color: #6070ff;
   cursor: pointer;
 }
