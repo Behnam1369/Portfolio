@@ -332,7 +332,7 @@ button:enabled {
 
 button:hover {
   color: #fff;
-  border: solid 1px #6070ff;
+  border: solid 1px #ffffff;
   background-color: #6070ff;
   cursor: pointer;
 }
@@ -799,4 +799,16 @@ i.devider {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.error-message {
+  font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+  color: red;
+  background-color: #ffdcdc;
+  padding: 10px;
+  text-align: center;
+  border: solid 2px red;
+  border-radius: 10px;
+  opacity: 0;
 }
