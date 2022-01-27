@@ -197,24 +197,26 @@ document.addEventListener(
 
 const form = document.getElementsByTagName('form')[0];
 const emailBox = document.getElementById('email');
+const nameBox = document.getElementById('name');
+const messageBox = document.getElementById('message');
 const error = document.getElementsByClassName('error-message')[0];
 const submitButton = document.querySelector('.submit-button');
 const pattern = /[A-Z]/g;
 
 function showError(text) {
-  if (!error.style.opacity) {
-    emailBox.addEventListener('input', () => {
-      if (emailBox.validity.valid && !pattern.test(emailBox.value)) {
-        emailBox.style.boxShadow = '';
-        error.style.opacity = 0;
-      } else {
-        error.style.opacity = 1;
-        emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
-      }
-    });
-    error.style.opacity = 1;
-    emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
-  }
+  // if (!error.style.opacity) {
+  emailBox.addEventListener('input', () => {
+    if (emailBox.validity.valid && !pattern.test(emailBox.value)) {
+      emailBox.style.boxShadow = '';
+      error.style.opacity = 0;
+    } else {
+      error.style.opacity = 1;
+      emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
+    }
+  });
+  error.style.opacity = 1;
+  emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
+  // }
 
   const outInterval = setInterval(() => {
     error.style.opacity -= 0.02;
@@ -241,4 +243,27 @@ submitButton.addEventListener('click', () => {
   } else {
     form.submit();
   }
+});
+
+let userInfo = { name: '', email: '', message: '' };
+if (localStorage.userInfo !== undefined) {
+  userInfo = JSON.parse(localStorage.userInfo);
+  nameBox.value = (userInfo.name ? userInfo.name : '');
+  emailBox.value = (userInfo.email ? userInfo.email : '');
+  messageBox.value = (userInfo.message ? userInfo.message : '');
+}
+
+nameBox.addEventListener('input', () => {
+  userInfo.name = nameBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+});
+
+emailBox.addEventListener('input', () => {
+  userInfo.email = emailBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+});
+
+messageBox.addEventListener('input', () => {
+  userInfo.message = messageBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
 });
