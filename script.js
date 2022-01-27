@@ -194,3 +194,51 @@ document.addEventListener(
   },
   false,
 );
+
+const form = document.getElementsByTagName('form')[0];
+const emailBox = document.getElementById('email');
+const error = document.getElementsByClassName('error-message')[0];
+const submitButton = document.querySelector('.submit-button');
+const pattern = /[A-Z]/g;
+
+function showError(text) {
+  if (!error.style.opacity) {
+    emailBox.addEventListener('input', () => {
+      if (emailBox.validity.valid && !pattern.test(emailBox.value)) {
+        emailBox.style.boxShadow = '';
+        error.style.opacity = 0;
+      } else {
+        error.style.opacity = 1;
+        emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
+      }
+    });
+    error.style.opacity = 1;
+    emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
+  }
+
+  const outInterval = setInterval(() => {
+    error.style.opacity -= 0.02;
+    if (error.style.opacity <= 0) {
+      clearInterval(outInterval);
+      error.innerHTML = text;
+      const inInterval = setInterval(() => {
+        error.style.opacity = Number(error.style.opacity) + 0.02;
+        if (error.style.opacity >= 1) {
+          clearInterval(inInterval);
+        }
+      }, 200 / 50);
+    }
+  }, 200 / 50);
+}
+
+submitButton.addEventListener('click', () => {
+  if (pattern.test(emailBox.value)) {
+    showError('All email letters should be in lower case');
+  } else if (emailBox.validity.valueMissing) {
+    showError('Please enter your email address');
+  } else if (emailBox.validity.typeMismatch) {
+    showError('Please enter a valid email address');
+  } else {
+    form.submit();
+  }
+});
