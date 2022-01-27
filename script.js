@@ -186,35 +186,42 @@ function craetePopups() {
   });
 }
 
+function scanLocalStorage() {
+  console.log(localStorage.Username)
+}
+
 document.addEventListener(
   'DOMContentLoaded',
   () => {
     createWorks();
     craetePopups();
+    scanLocalStorage();
   },
   false,
 );
 
 const form = document.getElementsByTagName('form')[0];
 const emailBox = document.getElementById('email');
+const nameBox = document.getElementById('name');
+const messageBox = document.getElementById('message');
 const error = document.getElementsByClassName('error-message')[0];
 const submitButton = document.querySelector('.submit-button');
 const pattern = /[A-Z]/g;
 
 function showError(text) {
-  if (!error.style.opacity) {
-    emailBox.addEventListener('input', () => {
-      if (emailBox.validity.valid && !pattern.test(emailBox.value)) {
-        emailBox.style.boxShadow = '';
-        error.style.opacity = 0;
-      } else {
-        error.style.opacity = 1;
-        emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
-      }
-    });
-    error.style.opacity = 1;
-    emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
-  }
+  //if (!error.style.opacity) {
+  emailBox.addEventListener('input', () => {
+    if (emailBox.validity.valid && !pattern.test(emailBox.value)) {
+      emailBox.style.boxShadow = '';
+      error.style.opacity = 0;
+    } else {
+      error.style.opacity = 1;
+      emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
+    }
+  });
+  error.style.opacity = 1;
+  emailBox.style.boxShadow = 'red 0 3px 0 0, red 0 0 0 3px';
+  //}
 
   const outInterval = setInterval(() => {
     error.style.opacity -= 0.02;
@@ -232,13 +239,32 @@ function showError(text) {
 }
 
 submitButton.addEventListener('click', () => {
+  //debugger;
+  //alert(pattern.test(emailBox.value));
   if (pattern.test(emailBox.value)) {
+    alert("error-caughy");
     showError('All email letters should be in lower case');
   } else if (emailBox.validity.valueMissing) {
     showError('Please enter your email address');
   } else if (emailBox.validity.typeMismatch) {
     showError('Please enter a valid email address');
   } else {
+    //alert(pattern + ' | ' + emailBox.value + ' | ' + pattern.test(emailBox.value));
     form.submit();
   }
+});
+
+//alert(/[A-Z]/g.test("Behnam.Aghaali@yahoo.com"))
+
+var userInfo = { name: '', email: '', message: '' };
+if (localStorage.userInfo != undefined) {
+  userInfo = JSON.parse(localStorage.userInfo);
+  nameBox.value = userInfo.name;
+  emailBox.value = userInfo.email;
+  messageBox.value = userInfo.message;
+}
+
+nameBox.addEventListener('input', () => {
+  userInfo.name = nameBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
 });

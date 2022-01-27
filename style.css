@@ -242,7 +242,6 @@ footer form {
 
 footer label {
   color: #fff;
-  margin-left: 10%;
   font-family: Volte, Helvetica, Arial, Verdana, Tahoma, sans-serif;
 }
 
@@ -268,6 +267,15 @@ footer label span {
   footer button {
     margin-left: 10%;
     margin-top: 0;
+  }
+
+  footer label {
+    margin-left: 10%;
+  }
+
+  footer .error-message {
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -461,6 +469,7 @@ i.devider {
   justify-content: flex-start;
   list-style: none;
   padding-left: 0;
+  flex-wrap: wrap;
 }
 
 .work .tag {
