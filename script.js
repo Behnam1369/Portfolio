@@ -259,12 +259,22 @@ submitButton.addEventListener('click', () => {
 var userInfo = { name: '', email: '', message: '' };
 if (localStorage.userInfo != undefined) {
   userInfo = JSON.parse(localStorage.userInfo);
-  nameBox.value = userInfo.name;
-  emailBox.value = userInfo.email;
-  messageBox.value = userInfo.message;
+  nameBox.value = (userInfo.name ? userInfo.name : '');
+  emailBox.value = (userInfo.email ? userInfo.email : '');
+  messageBox.value = (userInfo.message ? userInfo.message : '');
 }
 
 nameBox.addEventListener('input', () => {
   userInfo.name = nameBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+});
+
+emailBox.addEventListener('input', () => {
+  userInfo.email = emailBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+});
+
+messageBox.addEventListener('input', () => {
+  userInfo.message = messageBox.value;
   localStorage.userInfo = JSON.stringify(userInfo);
 });
