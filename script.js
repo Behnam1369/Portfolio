@@ -76,7 +76,7 @@ function createWorks() {
   projects.map((el, i) => {
     const work = document.createElement('div');
     work.classList.add('work');
-    work.innerHTML = `<img src='${el.img}' alt='Work ${i}' />
+    work.innerHTML = `<img src='${el.image}' alt='Work ${i}' />
         <div>
           <h3>${el.title}</h3>
           <span class='span1'>${el.client}</span>
