@@ -201,12 +201,11 @@ const nameBox = document.getElementById('name');
 const messageBox = document.getElementById('message');
 const error = document.getElementsByClassName('error-message')[0];
 const submitButton = document.querySelector('.submit-button');
-const pattern = /[A-Z]/g;
 
 function showError(text) {
   // if (!error.style.opacity) {
   emailBox.addEventListener('input', () => {
-    if (emailBox.validity.valid && !pattern.test(emailBox.value)) {
+    if (emailBox.validity.valid && emailBox.value.toLowerCase() == emailBox.value) {
       emailBox.style.boxShadow = '';
       error.style.opacity = 0;
     } else {
@@ -234,12 +233,12 @@ function showError(text) {
 }
 
 submitButton.addEventListener('click', () => {
-  if (pattern.test(emailBox.value)) {
-    showError('All email letters should be in lower case');
+  if (emailBox.value.toLowerCase() != emailBox.value) {
+    showError('All email letters should be in lower case.');
   } else if (emailBox.validity.valueMissing) {
-    showError('Please enter your email address');
+    showError('Please enter your email address.');
   } else if (emailBox.validity.typeMismatch) {
-    showError('Please enter a valid email address');
+    showError('Please enter a valid email address.');
   } else {
     form.submit();
   }
