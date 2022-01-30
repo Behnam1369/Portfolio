@@ -205,7 +205,7 @@ const submitButton = document.querySelector('.submit-button');
 function showError(text) {
   // if (!error.style.opacity) {
   emailBox.addEventListener('input', () => {
-    if (emailBox.validity.valid && emailBox.value.toLowerCase() == emailBox.value) {
+    if (emailBox.validity.valid && emailBox.value.toLowerCase() === emailBox.value) {
       emailBox.style.boxShadow = '';
       error.style.opacity = 0;
     } else {
@@ -233,7 +233,7 @@ function showError(text) {
 }
 
 submitButton.addEventListener('click', () => {
-  if (emailBox.value.toLowerCase() != emailBox.value) {
+  if (emailBox.value.toLowerCase() !== emailBox.value) {
     showError('All email letters should be in lower case.');
   } else if (emailBox.validity.valueMissing) {
     showError('Please enter your email address.');
