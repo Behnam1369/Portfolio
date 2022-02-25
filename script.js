@@ -69,6 +69,18 @@ const projects = [
     paragraph:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   },
+  {
+    img: 'images/work5.jpg',
+    title: 'To-do List',
+    client: 'Microverse',
+    role: 'Full Stack Developer',
+    year: '2022',
+    tags: ['html', 'css', 'javaScript', 'webpack'],
+    liveLink: 'https://behnam1369.github.io/to-do-list/',
+    sourceLink: 'https://github.com/Behnam1369/to-do-list',
+    paragraph:
+      'This project is focused on using webpack for creating an optimized deploy. In this project you can add a task, edit a task, mark a task as completed, remove a task or remove all completed tasks. After any interaction all tasks will be automatically saved into the local storage and They will be recalled after reopnening the page.   ',
+  },
 ];
 
 function createWorks() {
