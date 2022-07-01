@@ -35,15 +35,15 @@ const projects = [
   },
   {
     img: 'images/work2.jpg',
-    title: 'My Gym Mate',
-    client: 'Athletico',
+    title: 'Blog App',
+    client: 'Microverse',
     role: 'Full Stack Developer',
-    year: '2018',
-    tags: ['html', 'css', 'javaScript'],
-    liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
+    year: '2022',
+    tags: ['Ruby', 'Rails', 'Rspec'],
+    liveLink: 'https://rails-blog1000.herokuapp.com/',
     sourceLink: 'https://github.com/Behnam1369/Portfolio',
     paragraph:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+      'A simple blogging platform created using Ruby on Rails that alows users to create a profile, add Posts, like posts from other bloggers and add comment to posts. In this project I have used Devise gem for authentication, CanCanCan gem for authorization and Rspec/Capybara for integration tests. ',
   },
   {
     img: 'images/work3.jpg',
