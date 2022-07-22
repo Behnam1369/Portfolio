@@ -23,15 +23,15 @@ document.querySelector('i.fa').addEventListener('click', () => {
 const projects = [
   {
     img: 'images/work1.jpg',
-    title: 'My Gym Mate',
-    client: 'Athletico',
+    title: 'Tour Hunter',
+    client: 'Microverse',
     role: 'Full Stack Developer',
-    year: '2018',
-    tags: ['html', 'css', 'javaScript', 'github', 'ruby', 'bootstrap'],
-    liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
-    sourceLink: 'https://github.com/Behnam1369/Portfolio',
+    year: '2022',
+    tags: ['Ruby On Rials', 'React', 'Redux', 'Tailwind CSS', 'Postgres'],
+    liveLink: 'https://tourhunterapp.herokuapp.com/tours',
+    sourceLink: 'https://github.com/leopiresgoss/tour-hunter',
     paragraph:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+      'TourHunter is a project made by a group of 5 developers to give users options of tours around the world to reserve and the admins to add and delete said tours. General users can create an account to be able to reserve a tour and only admins will be able to create and delete tours.',
   },
   {
     img: 'images/work2.jpg',
@@ -39,7 +39,7 @@ const projects = [
     client: 'Microverse',
     role: 'Full Stack Developer',
     year: '2022',
-    tags: ['Ruby', 'Rails', 'Rspec'],
+    tags: ['Ruby', 'Rails', 'Postgres', 'Rspec'],
     liveLink: 'https://rails-blog1000.herokuapp.com/',
     sourceLink: 'https://github.com/Behnam1369/Portfolio',
     paragraph:
