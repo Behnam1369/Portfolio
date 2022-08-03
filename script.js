@@ -22,12 +22,25 @@ document.querySelector('i.fa').addEventListener('click', () => {
 
 const projects = [
   {
+    img: 'images/work0.jpg',
+    title: 'Contract Management System',
+    client: 'PECO',
+    role: 'Full Stack Developer',
+    year: '20218-Now',
+    tags: ['ASP.Net', 'javascript', 'JQuery', 'SQL Server'],
+    liveLink: 'http://zlatan.pe-co.ir/',
+    sourceLink: 'https://github.com/Behnam1369/PECO',
+    paragraph: `A contract management system for PECO. It allows the client to keep track of the contracts, invoices and the payments. It also contains a flexible workflow manager to design the process of reviewing invoices. And finally, users can get a variety range of reports based on contract, client, cost centers, currency, etc. <br />
+       When designing the workflow, Every review step can contain an stansard deadline to review the invoice. And the system will automatically send an email to the client when the deadline is reached. </br>
+       The client of this project is PECO (Pezhvak Energy Company) which is a well known and reputable drilling company.`,
+  },
+  {
     img: 'images/work1.jpg',
     title: 'Tour Hunter',
     client: 'Microverse',
     role: 'Full Stack Developer',
     year: '2022',
-    tags: ['Ruby On Rials', 'React', 'Redux', 'Tailwind CSS', 'Postgres'],
+    tags: ['Ruby on Rials', 'React', 'Redux', 'Tailwind CSS', 'Postgres'],
     liveLink: 'https://tourhunterapp.herokuapp.com/tours',
     sourceLink: 'https://github.com/leopiresgoss/tour-hunter',
     paragraph:
@@ -39,7 +52,7 @@ const projects = [
     client: 'Microverse',
     role: 'Full Stack Developer',
     year: '2022',
-    tags: ['Ruby', 'Rails', 'Postgres', 'Rspec'],
+    tags: ['Ruby on Rails', 'Postgres', 'Rspec'],
     liveLink: 'https://rails-blog1000.herokuapp.com/',
     sourceLink: 'https://github.com/Behnam1369/Portfolio',
     paragraph:
@@ -47,27 +60,15 @@ const projects = [
   },
   {
     img: 'images/work3.jpg',
-    title: 'My Gym Mate',
-    client: 'Athletico',
+    title: 'Budget App',
+    client: 'Microverse',
     role: 'Full Stack Developer',
-    year: '2018',
-    tags: ['html', 'css', 'javaScript', 'bootstrap'],
-    liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
-    sourceLink: 'https://github.com/Behnam1369/Portfolio',
+    year: '2022',
+    tags: ['Ruby on Rails', 'Postgres', 'Rspec'],
+    liveLink: 'https://myexpenditures.herokuapp.com/',
+    sourceLink: 'https://github.com/Behnam1369/budget-app',
     paragraph:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-  },
-  {
-    img: 'images/work4.jpg',
-    title: 'My Gym Mate',
-    client: 'Athletico',
-    role: 'Full Stack Developer',
-    year: '2018',
-    tags: ['html', 'css', 'javaScript', 'github', 'ruby'],
-    liveLink: 'https://behnam1369.github.io/Portfolio/index.html',
-    sourceLink: 'https://github.com/Behnam1369/Portfolio',
-    paragraph:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+      'Budget app is a mobile application that helps users to keep track of their expenditures. It allows users to add expenditure categories and add expenditures to any category. Finally they can see the total spent amount for each category. ',
   },
   {
     img: 'images/work5.jpg',
@@ -217,7 +218,10 @@ const submitButton = document.querySelector('.submit-button');
 function showError(text) {
   // if (!error.style.opacity) {
   emailBox.addEventListener('input', () => {
-    if (emailBox.validity.valid && emailBox.value.toLowerCase() === emailBox.value) {
+    if (
+      emailBox.validity.valid
+      && emailBox.value.toLowerCase() === emailBox.value
+    ) {
       emailBox.style.boxShadow = '';
       error.style.opacity = 0;
     } else {
@@ -259,9 +263,9 @@ submitButton.addEventListener('click', () => {
 let userInfo = { name: '', email: '', message: '' };
 if (localStorage.userInfo !== undefined) {
   userInfo = JSON.parse(localStorage.userInfo);
-  nameBox.value = (userInfo.name ? userInfo.name : '');
-  emailBox.value = (userInfo.email ? userInfo.email : '');
-  messageBox.value = (userInfo.message ? userInfo.message : '');
+  nameBox.value = userInfo.name ? userInfo.name : '';
+  emailBox.value = userInfo.email ? userInfo.email : '';
+  messageBox.value = userInfo.message ? userInfo.message : '';
 }
 
 nameBox.addEventListener('input', () => {
