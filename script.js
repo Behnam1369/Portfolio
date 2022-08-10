@@ -1,4 +1,4 @@
-document.querySelector('i.fa').addEventListener('click', () => {
+document.querySelector('i.fa-bars').addEventListener('click', () => {
   const menu = document.querySelector('#mobile-menu');
   menu.style.display = 'flex';
   const closeButton = document.createElement('li');
@@ -54,7 +54,7 @@ const projects = [
     year: '2022',
     tags: ['Ruby on Rails', 'Postgres', 'Rspec'],
     liveLink: 'https://rails-blog1000.herokuapp.com/',
-    sourceLink: 'https://github.com/Behnam1369/Portfolio',
+    sourceLink: 'https://github.com/Behnam1369/rails-blog',
     paragraph:
       'A simple blogging platform created using Ruby on Rails that alows users to create a profile, add Posts, like posts from other bloggers and add comment to posts. In this project I have used Devise gem for authentication, CanCanCan gem for authorization and Rspec/Capybara for integration tests. ',
   },
@@ -281,4 +281,18 @@ emailBox.addEventListener('input', () => {
 messageBox.addEventListener('input', () => {
   userInfo.message = messageBox.value;
   localStorage.userInfo = JSON.stringify(userInfo);
+});
+
+const chevrons = document.querySelectorAll('.chevron');
+Array.from(chevrons).forEach((chevron) => {
+  chevron.addEventListener('click', () => {
+    chevron.classList.toggle('fa-chevron-down');
+    chevron.classList.toggle('fa-chevron-right');
+    chevron.nextElementSibling.classList.toggle('hidden');
+  });
+});
+
+document.querySelector('.get-resume').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = '/Behnam Aghaali-Resume.pdf';
 });
