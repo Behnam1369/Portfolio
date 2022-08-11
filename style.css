@@ -34,7 +34,8 @@ nav > a {
   margin-top: -20px;
 }
 
-.popup a {
+.popup a,
+.popup span.see-source-button {
   margin-top: 3px;
   display: inline-flex;
   flex-basis: 47%;
@@ -338,14 +339,14 @@ button:enabled {
   background-color: #fff;
 }
 
-button:hover {
+button:enabled:hover {
   color: #fff;
   border: solid 1px #fff;
   background-color: #6070ff;
   cursor: pointer;
 }
 
-button:active {
+button:enabled:active {
   color: #fff;
   border: solid 1px #6070ff;
   background-color: #2230d2;
@@ -573,15 +574,24 @@ i.devider {
   background-position-y: center;
 }
 
-.see-project-button button {
+a.see-project-button button {
   background-image: url("images/see-live.png");
 }
 
-.see-source-button button {
+a.see-project-button:hover button {
+  background-image: url("images/see-live-white.png");
+}
+
+a.see-source-button button {
   background-image: url("images/github-icon.png");
 }
 
-.popup a button {
+a.see-source-button:hover button {
+  background-image: url("images/github-icon-white.png");
+}
+
+.popup a button,
+.popup span button {
   width: 100%;
 }
 
