@@ -22,19 +22,6 @@ document.querySelector('i.fa-bars').addEventListener('click', () => {
 
 const projects = [
   {
-    img: 'images/work0.jpg',
-    title: 'Contract Management System',
-    client: 'PECO',
-    role: 'Full Stack Developer',
-    year: '20218-Now',
-    tags: ['ASP.Net', 'javascript', 'JQuery', 'SQL Server'],
-    liveLink: 'http://zlatan.pe-co.ir/',
-    sourceLink: 'https://github.com/Behnam1369/PECO',
-    paragraph: `A contract management system for PECO. It allows the client to keep track of the contracts, invoices and the payments. It also contains a flexible workflow manager to design the process of reviewing invoices. And finally, users can get a variety range of reports based on contract, client, cost centers, currency, etc. <br />
-       When designing the workflow, Every review step can contain an stansard deadline to review the invoice. And the system will automatically send an email to the client when the deadline is reached. </br>
-       The client of this project is PECO (Pezhvak Energy Company) which is a well known and reputable drilling company.`,
-  },
-  {
     img: 'images/work1.jpg',
     title: 'Tour Hunter',
     client: 'Microverse',
@@ -82,6 +69,19 @@ const projects = [
     paragraph:
       'This project is focused on using webpack for creating an optimized deploy. In this project you can add a task, edit a task, mark a task as completed, remove a task or remove all completed tasks. After any interaction all tasks will be automatically saved into the local storage and They will be recalled after reopnening the page.   ',
   },
+  {
+    img: 'images/work0.jpg',
+    title: 'Contract Management System',
+    client: 'PECO',
+    role: 'Full Stack Developer',
+    year: '20218-Now',
+    tags: ['ASP.Net', 'javascript', 'JQuery', 'SQL Server'],
+    liveLink: 'http://zlatan.pe-co.ir/',
+    sourceLink: 'Private',
+    paragraph: `A contract management system for PECO. It allows the client to keep track of the contracts, invoices and the payments. It also contains a flexible workflow manager to design the process of reviewing invoices. And finally, users can get a variety range of reports based on contract, client, cost centers, currency, etc. <br />
+       When designing the workflow, Every review step can contain an stansard deadline to review the invoice. And the system will automatically send an email to the client when the deadline is reached. </br>
+       The client of this project is PECO (Pezhvak Energy Company) which is a well known and reputable drilling company.`,
+  },
 ];
 
 function createWorks() {
@@ -116,6 +116,12 @@ function craetePopups() {
     el.addEventListener('click', () => {
       const popupContainer = document.createElement('div');
       popupContainer.classList.add('popup-container');
+      popupContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('popup-container')) {
+          popupContainer.remove();
+          document.querySelector('html').style.overflow = 'auto';
+        }
+      });
 
       const popup = document.createElement('div');
       popup.classList.add('popup');
@@ -180,15 +186,24 @@ function craetePopups() {
 
       const seeLiveButton = document.createElement('a');
       seeLiveButton.setAttribute('href', projects[i].liveLink);
+      seeLiveButton.setAttribute('target', '_blank');
       seeLiveButton.classList.add('see-project-button');
       seeLiveButton.innerHTML = '<button> See Live </button>';
       tagsAndButtonsDiv.appendChild(seeLiveButton);
 
-      const seeSourceButton = document.createElement('a');
-      seeSourceButton.setAttribute('href', projects[i].sourceLink);
-      seeSourceButton.classList.add('see-source-button');
-      seeSourceButton.innerHTML = '<button> See Source </button>';
-      tagsAndButtonsDiv.appendChild(seeSourceButton);
+      if (projects[i].sourceLink === 'Private') {
+        const seeSourceButton = document.createElement('span');
+        seeSourceButton.classList.add('see-source-button');
+        seeSourceButton.innerHTML = '<button disabled> Source is private </button>';
+        tagsAndButtonsDiv.appendChild(seeSourceButton);
+      } else {
+        const seeSourceButton = document.createElement('a');
+        seeSourceButton.setAttribute('href', projects[i].sourceLink);
+        seeSourceButton.setAttribute('target', '_blank');
+        seeSourceButton.classList.add('see-source-button');
+        seeSourceButton.innerHTML = '<button> See Source </button>';
+        tagsAndButtonsDiv.appendChild(seeSourceButton);
+      }
 
       popup.appendChild(tagsAndButtonsDiv);
 
