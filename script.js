@@ -294,5 +294,5 @@ Array.from(chevrons).forEach((chevron) => {
 
 document.querySelector('.get-resume').addEventListener('click', (e) => {
   e.preventDefault();
-  window.location.href = '/Behnam Aghaali-Resume.pdf';
+  window.location.href = 'https://github.com/Behnam1369/Portfolio/raw/main/Behnam%20Aghaali-Resume.pdf';
 });
