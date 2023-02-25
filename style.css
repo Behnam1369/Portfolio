@@ -383,9 +383,65 @@ button:enabled:active {
   align-items: baseline;
 }
 
-.work > img {
+.work > div:first-child {
   width: calc(100% - 1vw);
+  box-sizing: border-box;
+  position: relative;
 }
+
+.work > div:first-child > img {
+  width: 100%;
+  display: none;
+}
+
+.work > div:first-child > img.visible {
+  display: block;
+}
+
+button.prev {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 45px;
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  border: none;
+  background-color: transparent;
+  /* background-image: linear-gradient(90deg, #6070ffb5, #6070ff00); */
+  text-shadow:rgb(85, 91, 255) 0 0 10px;
+}
+
+button.prev:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #6070ff;
+  text-shadow:white 0 0 10px;
+}
+
+button.next {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 45px;
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  border: none;
+  background-color: transparent;
+  /* background-image: linear-gradient(270deg, #6070ffb5, #6070ff00); */
+  text-shadow:rgb(85, 91, 255) 0 0 10px;
+}
+
+button.next:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #6070ff;
+  text-shadow:white 0 0 10px;
+}
+
 
 .work > div {
   display: flex;
@@ -406,7 +462,7 @@ button:enabled:active {
     padding: 20px;
   }
 
-  .work:nth-child(even) img {
+  .work:nth-child(even) div:first-child {
     order: 1;
   }
 
