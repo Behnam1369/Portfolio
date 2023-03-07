@@ -23,6 +23,20 @@ document.querySelector('i.fa-bars').addEventListener('click', () => {
 const projects = [
   {
     media: [
+      { type: 'video', src: 'https://www.youtube.com/embed/gmtIj8AqmmI' },
+    ],
+    title: 'Racing Bars',
+    client: 'Personal Project',
+    role: 'Front-end Developer',
+    year: '2023',
+    tags: ['React'],
+    liveLink: 'https://racing-bars.netlify.app/',
+    sourceLink: 'https://github.com/Behnam1369/racing-bars',
+    paragraph:
+      "react-racing-bars is a data visualization tool that creates bar charts over timeframes. It can be used for generating animated infographs based on 3D data structure. It's published as an npm package and can be installed on any react project using `npm i react-racing-bars`command.",
+  },
+  {
+    media: [
       { type: 'image', src: 'images/homestretch.png' },
       { type: 'image', src: 'images/homestretch2.png' },
       { type: 'image', src: 'images/homestretch3.png' },
@@ -55,9 +69,7 @@ const projects = [
       'A note keeper application inspired by notion. Users can add notes with specific marksowns into multiple pages.',
   },
   {
-    media: [
-      { type: 'image', src: 'images/map.png' },
-    ],
+    media: [{ type: 'image', src: 'images/map.png' }],
     title: 'Map Surfur',
     client: 'Personal Project',
     role: 'Frontend developer',
@@ -84,7 +96,10 @@ const projects = [
       'This is a UI platform that eases access to streaming videos from a CCTV network. Users are able to search among cameras, Selet the tile vide and manipulate tiles by drag and drop operation.',
   },
   {
-    media: [{ type: 'image', src: 'images/work1.jpg' }, { type: 'image', src: 'images/work2.jpg' }],
+    media: [
+      { type: 'image', src: 'images/work1.jpg' },
+      { type: 'image', src: 'images/work2.jpg' },
+    ],
     title: 'Tour Hunter',
     client: 'Microverse',
     role: 'Full Stack Developer',
@@ -159,14 +174,23 @@ function createWorks() {
     work.classList.add('work');
     work.innerHTML = `
         <div>
-  ${el.media.map((med, i) => {
-    if (med.type === 'image') {
-      return `<img src='${med.src}' alt='${el.title}' class='${i === 0 ? 'visible' : ''}' />`;
-    } if (med.type === 'video') {
-      return `<iframe width="100%" class=' ${i === 0 ? 'visible' : ''}' src="${med.src}" title="HomeStretch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-    }
-    return '';
-  }).join('')}
+  ${el.media
+    .map((med, i) => {
+      if (med.type === 'image') {
+        return `<img src='${med.src}' alt='${el.title}' class='${
+          i === 0 ? 'visible' : ''
+        }' />`;
+      }
+      if (med.type === 'video') {
+        return `<iframe width="100%" class=' ${
+          i === 0 ? 'visible' : ''
+        }' src="${
+          med.src
+        }" title="HomeStretch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      }
+      return '';
+    })
+    .join('')}
         </div>
         <div>
           <h3>${el.title}</h3>
@@ -231,9 +255,13 @@ function createWorks() {
         img.classList.remove('visible');
         setTimeout(() => {
           img.style.display = 'none';
-          img.parentElement.children[img.parentElement.children.length - 2].style.display = 'block';
+          img.parentElement.children[
+            img.parentElement.children.length - 2
+          ].style.display = 'block';
           setTimeout(() => {
-            img.parentElement.children[img.parentElement.children.length - 2].classList.add('visible');
+            img.parentElement.children[
+              img.parentElement.children.length - 2
+            ].classList.add('visible');
           }, 20);
         }, 100);
       }
@@ -302,9 +330,16 @@ function craetePopups() {
       media.classList.add('media');
       projects[i].media.map((med, i) => {
         if (med.type === 'image') {
-          media.innerHTML += `<img src='${med.src}' alt='${el.title}' class='${i === 0 ? 'visible' : ''}' />`;
-        } if (med.type === 'video') {
-          media.innerHTML += `<iframe width="100%" class=' ${i === 0 ? 'visible' : ''}' src="${med.src}" title="HomeStretch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+          media.innerHTML += `<img src='${med.src}' alt='${el.title}' class='${
+            i === 0 ? 'visible' : ''
+          }' />`;
+        }
+        if (med.type === 'video') {
+          media.innerHTML += `<iframe width="100%" class=' ${
+            i === 0 ? 'visible' : ''
+          }' src="${
+            med.src
+          }" title="HomeStretch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         }
         return null;
       });
@@ -357,9 +392,13 @@ function craetePopups() {
           img.classList.remove('visible');
           setTimeout(() => {
             img.style.display = 'none';
-            img.parentElement.children[img.parentElement.children.length - 2].style.display = 'block';
+            img.parentElement.children[
+              img.parentElement.children.length - 2
+            ].style.display = 'block';
             setTimeout(() => {
-              img.parentElement.children[img.parentElement.children.length - 2].classList.add('visible');
+              img.parentElement.children[
+                img.parentElement.children.length - 2
+              ].classList.add('visible');
             }, 20);
           }, 100);
         }
